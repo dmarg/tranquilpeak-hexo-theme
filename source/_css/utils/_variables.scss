@@ -1,8 +1,30 @@
 // Global settings
 // --------------------------------------------
 
-// Typography
-$font-family-base:    'Open Sans', sans-serif;
+// Font families
+$open-sans:            'Open Sans';
+$open-sans-sans-serif: 'Open Sans', sans-serif;
+$merriweather-serif:   'Merriweather', serif;
+$menlo:                 Menlo;
+
+$font-family-base: $open-sans-sans-serif;
+
+$font-families: (
+   // base
+   'headings':          $open-sans-sans-serif,
+   // components
+   'code':              $open-sans,
+   'caption':           $merriweather-serif,
+   'image-gallery':     $open-sans,
+   'post-header-cover': $merriweather-serif,
+   'post-meta':         $open-sans-sans-serif,
+   'post-content':      $merriweather-serif,
+   'post-excerpt-link': $open-sans-sans-serif,
+   'highlight':         $menlo,
+   // layout
+   'sidebar':           $open-sans-sans-serif
+);
+
 // equal to 15px
 $font-size-base:      1.5rem;
 $font-color-base:     #5d686f;
@@ -42,13 +64,16 @@ $colors: (
 // `c-` prefix for components
 $z-indexes: (
     // position the cover below the whole blog
-    'l-cover':           -1,
-    'l-main':            10,
-    'l-header':          20,
-    'l-sidebar':         20,
-    'l-about':           21,
-    'c-tooltip':         1000,
-    'c-post-bottom-bar': 11
+    'l-cover':             -1,
+    'l-main':              10,
+    'c-post-header-cover': 15,
+    'l-header':            20,
+    'l-sidebar':           20,
+    'l-about':             30,
+    'c-mask':              30,
+    'c-post-bottom-bar':   40,
+    'c-share-options-bar': 50,
+    'c-tooltip':           1000
 );
 
 // Media Query Ranges
@@ -123,7 +148,8 @@ $sidebar: (
 
 // Main
 $main: (
-    'padding-top': 15px
+    'padding-top':      15px,
+    'background-color': #fff
 );
 
 // Components settings
@@ -132,7 +158,6 @@ $main: (
 
 // Highlight
 $highlight: (
-    'font-family': Menlo,
     'font-size':   1.3rem,
     'border':      1px solid #d9d9d9,
     'line-height': 1.2em
